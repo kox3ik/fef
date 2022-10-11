@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+<form action="http://localhost:9000/triangle/new" >
+     <h3><button style=" font-weight: bold;
+       background: -moz-linear-gradient(#00BBD6, #EBFFFF);
+        color: #333;
+        padding: 3px 7px;
+        background: -webkit-gradient(linear, 0 0, 0 100%, from(#00BBD6), to(#EBFFFF));
+     ">Добавить новый треугольник</button></h3>
+</form>
+
+   {% for triangle in model.triangles %}
+   <p><a href="http://localhost:9000/triangle/{{loop.index+1}}" > Треугольник {{loop.index+1}}</a></p>
+   {% endfor %}
+
+</body>
+</html>
